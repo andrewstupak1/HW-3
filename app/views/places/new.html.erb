@@ -1,19 +1,22 @@
 <h1>Add a New Place</h1>
 
-<form action="/place" method="post">
+<form action="/places" method="post">
   <p>
     <label for="place">Place</label>
     <input type="text" name="place" id="place">
   </p>
-  <label for="location">Location</label>
-    <input type="text" name="location" id="location">
-    <label for="date visited">Date visited</label>
-     <input type="text" name="date visited" id="date visited">
-    <label for="description">Description</label>
-    <input type="text" name="description" id="description">
+  <p>
+  <label for="date visited">Date visited</label>
+     <input type="date" name="date visited" id="date visited">
   </p>
+     <p>
+      <label for="description">Description</label>
+    <input type="text" name="description" id="description">
+     </p>
+     </p>
   <button>Submit</button>
-  <P>  
-  <a href="/places/">Back to all places</a>
-</P>
+ <p>
+   <a href="/places/">Back to all places</a>
+</p>
 </form>
+

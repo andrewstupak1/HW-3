@@ -16,9 +16,14 @@ def create
   @place["location"] = params["location"]
   @place["date_visited"] = params["date_visited"]
 
-  if @place.save
-    redirect_to "/places", notice: "Place created successfully!" 
+   if @place.save
+    redirect_to "/places/"
   else
     render :new, status: :unprocessable_entity 
+ #when debugging chat GPT suggested this line of code^
   end
 end
+
+
+
+

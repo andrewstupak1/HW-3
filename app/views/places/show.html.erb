@@ -1,4 +1,12 @@
-<h1><%= @place.name %></h1>
-<p><%= @place.description %></p>
-<p><%= @place.location %></p>
-<p><%= @place.date_visted %></p>
+<h1><%= @place["name"] %></h1>
+<p><%= @place["description"] %></p>
+<p><%= @place["location"] %></p>
+<p><%= @place["date_visted"]%></p>
+
+<p>
+  <a href="">New Trip</a>
+</p>
+
+<p>
+  <a href="/places/">Back to all places</a>
+</p>
