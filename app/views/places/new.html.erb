@@ -1,6 +1,9 @@
 <h1>Add a New Place</h1>
 
 <form action="/places" method="post">
+ <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"> 
+ <%#when de-bugging it told me i needed this line^%>
+
   <p>
     <label for="place">Place</label>
     <input type="text" name="place" id="place">

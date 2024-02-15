@@ -1,0 +1,25 @@
+<%= form_with model: @place do |form| %>
+  <p>
+    <%= form.label :place %>
+    <%= form.text_field :place %>
+  </p>
+
+  <p>
+    <%= form.label :description %>
+    <%= form.text_area :description %> 
+  </p>
+
+  <p>
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </p>
+
+  <p>
+    <%= form.label :date_visited %>
+    <%= form.date_field :date_visited %>
+  </p>
+
+  <p>
+    <%= form.submit  %> 
+  </p>
+<% end %>
