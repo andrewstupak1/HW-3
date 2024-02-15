@@ -7,14 +7,18 @@ def new
   @place = Place.new # Creates a new but unsaved Place object
 end
 
+def show
+@place = Place.find_by({"id" => params["id"]})
+
+end
+
 def create
   @place = Place.new
 
   @place["name"] = params["place"]
-  @place["description"] = params["description"]
-  @place["location"] = params["location"]
   @place["date_visited"] = params["date_visited"]
-
+  @place["description"] = params["description"]
+  
    if @place.save
     redirect_to "/places/"
   else
