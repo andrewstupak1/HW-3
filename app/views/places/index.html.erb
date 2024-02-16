@@ -2,10 +2,10 @@
 
 <ul>
   <% for place in @places %>
-  <p>
+  <h2>
     <a href="/places/<%= place["id"] %>">
    <%= place["name"] %>
-  </a>
+  </h2>
 </p> 
   <% end %>
 </ul>
