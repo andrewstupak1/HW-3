@@ -1,12 +1,16 @@
-<h1><%= @place["name"] %></h1>
-<p><%= @place["date_visited"]%></p>
-<p><%= @place["description"] %></p>
+
+<h1><%= @place["name"] %></h1> 
+
+<h2>Entries</h2>
+
+  <% for entry in @entries %>
+         <div> <h4><%= entry["description"]%> </h4></div> 
+         <%= entry["posted_on"] %> 
+  <% end %>
 
 
 <p>
-  <a href="/places/new/">New Trip</a>
+  <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
 </p>
 
-<p>
-  <a href="/places/">Back to all places</a>
-</p>
+<p><a href="/places/">Back to All Places</a></p>

@@ -1,0 +1,17 @@
+<h1>New Entry For <%= @place["place"] %></h1>
+
+<form action="/entries" method="post">
+  <p>
+    <label for="posted_on_input">Date</label>
+    <input type="date" name="posted_on" id="posted_on_input">
+
+    <label for="description_input">Description</label>
+    <input type="text" name="description" id="description_input">
+  </p>
+
+    <!-- So we can transfer state from the previous action to the next (i.e. which company the user clicked) -->
+  <input type="hidden" name="place_id" value="<%= @place["id"] %>" id="place_id_input">
+
+  <button>Submit</button>
+  <a href="/places/<%= @place["id"] %>">Cancel</a>
+</form>
